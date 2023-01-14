@@ -1,0 +1,45 @@
+body {
+    background-color: #FFFAFA;
+    font-size: 20px;
+    color: #FFB6C1;
+}
+
+.board {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cell {
+    height: 23%;
+    width: 23%;
+    box-sizing: border-box;
+    background-color: #D3D3D3;
+    border: 4px solid #FFB6C1;
+    border-radius: 10%;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: #FFB6C1;
+    margin: 20px 10px;
+    background-color: grey;
+    border-radius: 8%;
+    border: 3px solid #FFB6C1;
+}
+
+.btn:hover {
+    background-color: #F08080 ;
+    border-color: #F08080;
+}
+
+.goblin {
+    background-image: url("../img/goblin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
