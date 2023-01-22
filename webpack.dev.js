@@ -7,3 +7,17 @@ module.exports = merge(common, {
   // Control how source maps are generated
   devtool: 'inline-source-map',
 });
+
+devServer: {
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, '/dist'),
+    open: true,
+    compress: true,
+    port: 8888,
+  },
+
+  plugins: [
+    // Only update what has changed on hot reload
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+});
