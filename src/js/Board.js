@@ -7,14 +7,14 @@ export default class Board {
 
   rendering() {
     for (let i = 0; i < this.boardSize; i++) {
-      const cells = document.createElement('div');
-      cells.classList.add('cell');
-      this.board.appendChild(cells);
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      this.board.appendChild(cell);
     }
   }
 
   random() {
-    const array = document.querySelectorAll('.cell');
+    const arrayOfCells = document.querySelectorAll('.cell');
     const active = document.querySelector('.goblin');
     function randomSearch(min, max) {
       return Math.round(min - 0.5 + Math.random() * (max - min + 1));
@@ -25,7 +25,7 @@ export default class Board {
       if (active) {
         active.classList.toggle('goblin');
       }
-      array[this.pozitionItem].classList.toggle('goblin');
+      arrayOfCells[this.pozitionItem].classList.toggle('goblin');
     }
   }
 }
